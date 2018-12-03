@@ -1,0 +1,296 @@
+let display = document.querySelector('.display');
+let guessQuerySelector = document.querySelector('#character');
+let textForm = document.querySelector('.textForm');
+
+var commonWords = [
+  "the", "of", "and", "a", "to", "in", "is", "you", "that", "it", "he",
+  "was", "for", "on", "are", "as", "with", "his", "they", "I", "at", "be",
+  "this", "have", "from", "or", "one", "had", "by", "word", "but", "not",
+  "what", "all", "were", "we", "when", "your", "can", "said", "there",
+  "use", "an", "each", "which", "she", "do", "how", "their", "if", "will",
+  "up", "other", "about", "out", "many", "then", "them", "these", "so",
+  "some", "her", "would", "make", "like", "him", "into", "time", "has",
+  "look", "two", "more", "write", "go", "see", "number", "no", "way",
+  "could", "people", "my", "than", "first", "water", "been", "call",
+  "who", "oil", "its", "now", "find", "long", "down", "day", "did", "get",
+  "come", "made", "may", "part"
+];
+
+// Grabbing Random Word
+var getRandomWord = function(array) {
+  return array[Math.floor(Math.random() * array.length)];
+}
+
+var randomWord = getRandomWord(commonWords);
+console.log('randomWord', randomWord);
+
+// Function that submits the values
+textForm.addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  var counter = 10;
+  var triedCharacters = [];
+  var correctCharacters = [];
+
+  var guessWord = guessQuerySelector.value;
+  var shorterWordlength = randomWord.length > guessWord.length ? guessWord.length : randomWord.length;
+
+  console.log('guessWord', guessWord);
+
+  for (i = 0; i < shorterWordlength; i++) {
+      if (guessWord[i] === randomWord[i]) {
+        correctCharacters.push(guessWord[i])
+        console.log("correct " + correctCharacters)
+      } else {
+        triedCharacters.push(guessWord[i])
+        console.log("incorrect " + triedCharacters)
+      }
+  }
+  randomWord = getRandomWord(commonWords);
+  console.log('randomWord', randomWord);
+})
+
+
+
+
+
+
+
+
+
+
+//var x = document.getElementById("letter").innerHTML;
+
+// var current = 'elephant';
+
+// what functions do I need?
+
+// I need a function that checks to see if the user input is a letter from the word
+
+//var textPrint = document.getElementById ("textBox");
+
+var wordList = [ "classRoom", "library", "lab", "bookStore"];
+var randomWords = wordList[Math.floor(Math.random() * wordList.length)];
+function check(randomWords){
+    console.log("check");
+
+}
+    // bring user input and check if it is mach the random word.
+
+
+    var found = randomWords.find(function(check) {
+        return element ==$(`#x`);
+      });
+      
+      console.log(found);
+
+
+var randomword1;
+$('#x').text(randomWords1);
+
+
+
+
+function printletter(cb){
+
+    // if($('#x').text() ){
+
+    // }
+
+    // $(`#x`).text("hhh") 
+
+    
+
+    randomword1 = randomWords;
+    console.log("randomWords: " + randomWords);
+    var guessString = "";
+    var valueOfText = document.getElementById("textBox").value;
+    var splitWord =[];
+    splitWord = randomWords.split();
+    console.log(valueOfText)
+    console.log(splitWord);
+    game();
+    function game(){
+
+         for(var g = 0 ; g < randomWords.length ; g++){
+            $('#x').text(randomWords);
+    
+            console.log( 'x value ' , $(`#x`).text(" ") )
+        } 
+
+        
+        for(var j = 0 ; j < randomWords.length ; j++){
+                  $('#x').append(`<div class="guessingLetter" id = ${j}> `+ '</div>');
+             }
+
+             for (var i = 0; i < splitWord.length; i++){
+                if(splitWord[i] == valueOfText){
+                    $('#'+i).innerHtml = valueOfText;
+                    document.getElementById(`${i}`).innerHTML= valueOfText;
+                }
+             }
+        
+
+
+
+    }
+
+   
+    for(var g = 0 ; g < randomWords.length ; g++){
+        $('#x').text(randomWords);
+
+        console.log( 'x value ' ,$(`#x`) .text(" ") );
+    } 
+
+    check(randomWords);
+    
+     console.log(valueOfText); 
+    document.getElementById("print").innerHTML = valueOfText.toUpperCase();
+
+
+
+
+ var randomWords = wordList[Math.floor(Math.random() * wordList.length)];
+
+ console.log(randomWords);
+
+  $('txtOutput').val('');
+
+*/
+
+
+//   var guessingBox = {};
+//    function guessing1(){
+//    }
+//   var w = 'bbyubyuubuyy';
+//   var pp = [];
+
+
+
+//  console.log(randomWords);
+
+//      var len;
+//     var x= document.getElementById('x');
+//      var textField = document.getElementById('textBox');
+//      var guessString = "";
+//     for(var f = 0 ; f < randomWords.length ; f++){
+//        guessString += "  " ;
+//         console.log(guessString.length);     }
+
+//   var copyList = wordList.map();
+
+// var splitWord = randomWords.split('');
+
+//      for(var i=0; i< randomWords.length; i++){
+//         var word = wordList[i];
+        
+//   if(textField.value == splitWord[i]){
+//              console.log("true");
+// guessString += textField.value;
+//              console.log("guessString :" + guessString);
+             
+//          }else{
+//              console.log("false");
+//          }
+//      }
+//         // pp = wordList[2];
+//    for(var g = 0 ; g < randomWords.length ; g++){
+//      $(d).append('<div class="guessingLetter">' + guessString[g] + '</div>');
+//  }
+
+//      console.log("n");
+
+    
+//    for(var g = 0 ; g < guessString.length ; g++){
+//         $(d).append('<div class="guessingLetter">' + guessString[g] + '</div>');
+//     }
+
+//  }
+}
+//  guessing1();
+//  var output = document.getElementById("txtOutput");
+// output.addEventListener('click',guessing1);
+
+
+
+
+
+
+
+
+
+
+
+
+//  I need an array that included the words as a wordslist
+
+var wordList = ["desk", "books", "lab", "board"];
+var randomWords = Math.floor(Math.random() * wordList.length);
+var newArr = wordList[randomWords];
+var lenghthWord = newArr.length;
+var userGuess = [lenghthWord];
+var win = lenghthWord;
+var letterSplit = newArr.split('');
+var attempts = 10;
+output = "";
+var userLetter = "";
+console.log(" the random word is", newArr);
+
+//function that can print word randomly each time
+
+
+
+//var gussingLetter1= "";
+// print user input
+function printLetter() {
+
+    var inputTextBox = document.getElementById("inputTextBox").value;
+    console.log("user input", inputTextBox);
+
+    textBox.innerHTML = inputTextBox;
+
+
+    //split the randomword for letters
+    //console.log( "split word" , )
+    var index = randomWords.indexOf(inputTextBox)
+
+
+    //cheack if the user input match the randomword
+
+    setTheGame();
+
+    function setTheGame() {
+
+        for (var i = 0; i < newArr.length; i++) {
+            userGuess[i] = "_";
+
+            output = output + userGuess[i];
+        }
+
+        document.querySelector('#guessingLetter').innerHTML = output;
+        output = "";
+    }
+    if (index > -1) {
+
+        console.log('right guess');
+        //newArr.push(randomWords[index])
+
+        console.log(newArr);
+        //newArr.shift(randomWords[index]);
+        console.log(newArr);
+
+
+
+    }
+
+    else {
+
+        console.log("wrong letter");
+    }
+
+}
+
+
+// print he user input if it match 
+
+
